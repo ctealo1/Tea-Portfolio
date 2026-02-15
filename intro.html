@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction - [Your Name]</title>
+    <!-- Using Google Fonts for modern typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            /* Modern Color Palette */
+            --bg-dark: #0f172a;
+            --bg-card: rgba(30, 41, 59, 0.7);
+            --primary: #8b5cf6;
+            /* Violet */
+            --secondary: #ec4899;
+            /* Pink */
+            --accent: #06b6d4;
+            /* Cyan */
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --gradient-main: linear-gradient(135deg, var(--primary), var(--secondary));
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Background Effects */
+        .bg-glow {
+            position: fixed;
+            width: 500px;
+            height: 500px;
+            background: var(--primary);
+            filter: blur(150px);
+            opacity: 0.2;
+            border-radius: 50%;
+            z-index: -1;
+            top: -100px;
+            left: -100px;
+            animation: float 10s infinite alternate;
+        }
+
+        .bg-glow-2 {
+            position: fixed;
+            width: 400px;
+            height: 400px;
+            background: var(--accent);
+            filter: blur(150px);
+            opacity: 0.15;
+            border-radius: 50%;
+            z-index: -1;
+            bottom: 0;
+            right: 0;
+            animation: float 12s infinite alternate-reverse;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            100% {
+                transform: translate(50px, 50px);
+            }
+        }
+
+        /* Container */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Typography */
+        h1,
+        h2,
+        h3 {
+            font-family: 'Outfit', sans-serif;
+            color: var(--text-main);
+        }
+
+        .gradient-text {
+            background: var(--gradient-main);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Hero Section */
+        header {
+            min-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 1.5rem;
+            animation: fadeIn 1s ease-out;
+        }
+
+        header h1 {
+            font-size: clamp(3rem, 8vw, 6rem);
+            line-height: 1.1;
+            font-weight: 700;
+        }
+
+        header h2 {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            font-weight: 600;
+            opacity: 0.9;
+        }
+
+        header p.tagline {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 600px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 1rem 2rem;
+            background: var(--gradient-main);
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(139, 92, 246, 0.3);
+        }
+
+        /* Sections General */
+        section {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            width: 60px;
+            height: 4px;
+            background: var(--gradient-main);
+            border-radius: 2px;
+        }
+
+        /* Grid Layouts */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        /* Cards */
+        .card {
+            background: var(--bg-card);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 1.5rem;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(139, 92, 246, 0.5);
+        }
+
+        /* About & School */
+        .info-group h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        .info-group p {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        /* Capabilities / Skills */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .skill-tag {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 0.5rem 1.25rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .skill-tag:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        /* Footer */
+        footer {
+            padding: 3rem 0;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            margin-top: 3rem;
+            color: var(--text-muted);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 3.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Ambient Background Effects -->
+    <div class="bg-glow"></div>
+    <div class="bg-glow-2"></div>
+
+    <div class="container">
+
+        <!-- Hero Section -->
+        <header>
+            <p style="color: var(--secondary); font-weight: 600; letter-spacing: 2px; text-transform: uppercase;">Hello,
+                I am</p>
+            <h1><span class="gradient-text">Téa Lorainne O. Chua</span></h1>
+            <h2>Student</h2>
+            <p class="tagline">
+                [A brief 1-2 sentence bio about yourself. Example: Passionate about creating digital experiences and
+                solving problems through code.]
+            </p>
+            <a href="#contact" class="cta-button">Get in Touch</a>
+        </header>
+
+        <!-- About & Education Section -->
+        <section id="about">
+            <h2 class="section-title">About Me</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <div class="info-group">
+                        <h3>My Journey</h3>
+                        <p>
+                            [Write a paragraph about your background here. What got you interested in your field? What
+                            drives you?]
+                        </p>
+                    </div>
+                    <div class="info-group">
+                        <h3>Education</h3>
+                        <p><strong>University of Santo Tomas - Manila</strong><br>
+                            Information Systems<br>
+                            <span style="font-size: 0.9em; opacity: 0.7;">[2023] - [2027]</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card"
+                    style="display: flex; align-items: center; justify-content: center; min-height: 300px; background: rgba(255,255,255,0.03);">
+                    <!-- Placeholder for an Image -->
+                    <div style="text-align: center; opacity: 0.5;">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                            <polyline points="21 15 16 10 5 21"></polyline>
+                        </svg>
+                        <p style="margin-top: 1rem;">[Place your photo here]</p>
+                        <small>Use an &lt;img&gt; tag</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Capabilities / Skills Section -->
+        <section id="capabilities">
+            <h2 class="section-title">Capabilities</h2>
+            <p style="margin-bottom: 2rem; color: var(--text-muted); max-width: 600px;">
+                Tools, technologies, and skills I have worked with.
+            </p>
+
+            <div class="grid-2">
+                <div class="card">
+                    <h3>Technical Skills</h3>
+                    <div class="skills-container" style="margin-top: 1.5rem;">
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">React</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Soft Skills & Others</h3>
+                    <div class="skills-container" style="margin-top: 1.5rem;">
+                        <span class="skill-tag">Communication</span>
+                        <span class="skill-tag">Teamwork</span>
+                        <span class="skill-tag">Problem Solving</span>
+                        <span class="skill-tag">Skill 4</span>
+                        <span class="skill-tag">English</span>
+                        <span class="skill-tag">Filipino</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- More / Portfolio Section -->
+        <section id="projects">
+            <h2 class="section-title">Projects & More</h2>
+            <div class="grid-2">
+                <!-- Project Card 1 -->
+                <div class="card">
+                    <h3>[Project Title 1]</h3>
+                    <p>[Brief description of what this project does and the tools used.]</p>
+                    <a href="#" style="color: var(--accent); text-decoration: none; font-weight: 500;">View Project
+                        &rarr;</a>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="card">
+                    <h3>[Project Title 2]</h3>
+                    <p>[Brief description of what this project does and the tools used.]</p>
+                    <a href="#" style="color: var(--accent); text-decoration: none; font-weight: 500;">View Project
+                        &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" style="text-align: center; max-width: 600px; margin: 0 auto;">
+            <h2 class="section-title">Get In Touch</h2>
+            <p style="color: var(--text-muted); margin-bottom: 2rem;">
+                I am currently open to new opportunities and collaborations. Feel free to reach out!
+            </p>
+            <a href="mailto:tealorainne.chua.cics@ust.edu.ph" class="cta-button">Email Me</a>
+
+            <div style="margin-top: 3rem; display: flex; justify-content: center; gap: 2rem;">
+                <!-- Social Links Placeholders -->
+                <a href="#" style="color: var(--text-muted); transition: color 0.3s;"
+                    onmouseover="this.style.color='var(--text-main)'"
+                    onmouseout="this.style.color='var(--text-muted)'">LinkedIn</a>
+                <a href="#" style="color: var(--text-muted); transition: color 0.3s;"
+                    onmouseover="this.style.color='var(--text-main)'"
+                    onmouseout="this.style.color='var(--text-muted)'">GitHub</a>
+                <a href="#" style="color: var(--text-muted); transition: color 0.3s;"
+                    onmouseover="this.style.color='var(--text-main)'"
+                    onmouseout="this.style.color='var(--text-muted)'">Twitter</a>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Téa Lorainne O. Chua. All rights reserved.</p>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
