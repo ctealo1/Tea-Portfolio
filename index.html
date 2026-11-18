@@ -35,22 +35,6 @@
       </nav>
 
       <div class="header-controls">
-        <!-- Global Role Lens Switcher -->
-        <div class="lens-switcher" role="group" aria-label="Role Perspective Switcher">
-          <button type="button" class="lens-btn is-active" data-lens-target="both" aria-pressed="true">
-            <span class="lens-dot lens-dot-both" aria-hidden="true"></span>
-            <span>Dual-Role</span>
-          </button>
-          <button type="button" class="lens-btn" data-lens-target="pm" aria-pressed="false">
-            <span class="lens-dot lens-dot-pm" aria-hidden="true"></span>
-            <span>PM Focus</span>
-          </button>
-          <button type="button" class="lens-btn" data-lens-target="qa" aria-pressed="false">
-            <span class="lens-dot lens-dot-qa" aria-hidden="true"></span>
-            <span>QA Focus</span>
-          </button>
-        </div>
-
         <button
           type="button"
           class="icon-btn"
@@ -110,10 +94,6 @@
             <span class="pulse-dot" aria-hidden="true"></span>
             <span>BS Information Systems &middot; University of Santo Tomas (2023&ndash;Present) &middot; Manila, PH</span>
           </div>
-
-          <div class="hero-lens-pill" id="hero-lens-badge">
-            Active Lens: <strong id="active-lens-label">Dual-Role (PM + QA)</strong>
-          </div>
         </div>
 
         <div class="hero-content">
@@ -128,7 +108,7 @@
             Project Manager, Quality Assurance Lead &amp; Systems Analyst capable of driving end-to-end SDLC execution from requirement scoping and sprint coordination to comprehensive test planning, defect governance, and release assurance.
           </p>
 
-          <!-- Hero Role Lens Switcher (accessible inline mirror) -->
+          <!-- Hero Actions -->
           <div class="hero-controls">
             <div class="cta-group">
               <a href="#experience" class="btn btn-primary">Explore Experience</a>
@@ -144,24 +124,6 @@
               <button type="button" class="btn btn-ghost" id="open-customizer-hero">
                 Personalize Header
               </button>
-            </div>
-
-            <div class="inline-lens-bar" aria-label="Switch Role Focus">
-              <span class="inline-lens-label">Tailor portfolio focus:</span>
-              <div class="lens-switcher lens-switcher-lg" role="group" aria-label="Hero Role Perspective Switcher">
-                <button type="button" class="lens-btn is-active" data-lens-target="both" aria-pressed="true">
-                  <span class="lens-dot lens-dot-both" aria-hidden="true"></span>
-                  <span>Dual-Role (PM + QA)</span>
-                </button>
-                <button type="button" class="lens-btn" data-lens-target="pm" aria-pressed="false">
-                  <span class="lens-dot lens-dot-pm" aria-hidden="true"></span>
-                  <span>Project Manager</span>
-                </button>
-                <button type="button" class="lens-btn" data-lens-target="qa" aria-pressed="false">
-                  <span class="lens-dot lens-dot-qa" aria-hidden="true"></span>
-                  <span>QA &amp; Testing Lead</span>
-                </button>
-              </div>
             </div>
           </div>
         </div>
@@ -710,7 +672,7 @@
 
         <article class="edu-card">
           <div class="edu-main">
-            <div class="edu-crest" aria-hidden="true">UST</div>
+            <img src="ust-logo.png" alt="University of Santo Tomas Seal" class="edu-crest" />
             <div>
               <div class="edu-meta">
                 <span>Manila, Philippines</span>
@@ -798,9 +760,6 @@
                 </dd>
               </div>
             </dl>
-            <p class="contact-note">
-              Note: Because the uploaded PDF started at the Education header, contact details can be customized locally in your browser (saved in <code>localStorage</code>) or edited directly in <code>script.js</code>.
-            </p>
           </div>
         </div>
       </div>

@@ -103,19 +103,7 @@ function initTheme() {
    ========================================================================== */
 
 function initRoleLens() {
-  const savedLens = localStorage.getItem(STORAGE_KEYS.lens);
-  const initialLens = savedLens && LENS_COPY[savedLens] ? savedLens : "both";
-  applyLens(initialLens, false);
-
-  const lensButtons = document.querySelectorAll("[data-lens-target]");
-  lensButtons.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const target = btn.getAttribute("data-lens-target");
-      if (target && LENS_COPY[target]) {
-        applyLens(target, true);
-      }
-    });
-  });
+  applyLens("both", false);
 }
 
 function applyLens(lens, syncUserFilters = true) {
