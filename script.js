@@ -5,7 +5,7 @@
  */
 
 const DEFAULT_PROFILE = {
-  fullName: "Your Name",
+  fullName: "Your Name Here",
   location: "Manila, Philippines",
   email: "your.email@example.com",
   phone: "+63 9XX XXX XXXX",
@@ -15,7 +15,7 @@ const DEFAULT_PROFILE = {
 
 const STORAGE_KEYS = {
   lens: "portfolio_role_lens_v1",
-  theme: "portfolio_theme_v1",
+  theme: "portfolio_theme_v2",
   profile: "portfolio_profile_v1",
 };
 
@@ -23,7 +23,7 @@ const LENS_COPY = {
   both: {
     label: "Dual-Role (PM + QA)",
     eyebrow: "Project Management • Quality & Delivery Assurance • Systems Analysis",
-    title: "Bridging Strategic Project Delivery & Rigorous Software Quality Assurance",
+    title: "Project Manager, Systems Analyst & Quality Assurance Lead",
     subtitle:
       "Project Manager, Quality Assurance Lead & Systems Analyst capable of driving end-to-end SDLC execution from requirement scoping and sprint coordination to comprehensive test planning, defect governance, and release assurance.",
     skillFilter: "all",
@@ -31,7 +31,7 @@ const LENS_COPY = {
   pm: {
     label: "Project Manager Focus",
     eyebrow: "Project Coordination • Systems Analysis • Agile & ITIL v4 Delivery",
-    title: "Delivering Enterprise Systems Through Structured Agile & ITIL v4 Execution",
+    title: "Project Coordinator & Systems Analyst — Agile & ITIL v4 Delivery",
     subtitle:
       "Project Coordinator & Systems Analyst specializing in requirement scoping, sprint velocity, risk mitigation, and cross-functional stakeholder alignment.",
     skillFilter: "pm",
@@ -39,7 +39,7 @@ const LENS_COPY = {
   qa: {
     label: "QA & Testing Lead Focus",
     eyebrow: "Quality & Delivery Assurance • Test Planning • UAT & Defect Governance",
-    title: "Safeguarding Software Reliability Through Quality Gates & End-to-End Validation",
+    title: "Quality & Delivery Assurance Lead — Test Planning & UAT Governance",
     subtitle:
       "Quality & Delivery Assurance Lead specializing in comprehensive test plans, acceptance criteria, defect lifecycle management, and UAT governance.",
     skillFilter: "qa",
@@ -84,14 +84,14 @@ document.addEventListener("DOMContentLoaded", () => {
 function initTheme() {
   const root = document.documentElement;
   const savedTheme = localStorage.getItem(STORAGE_KEYS.theme);
-  const initialTheme = savedTheme === "light" || savedTheme === "dark" ? savedTheme : "dark";
+  const initialTheme = savedTheme === "light" || savedTheme === "dark" ? savedTheme : "light";
   root.setAttribute("data-theme", initialTheme);
 
   const toggleBtn = document.getElementById("theme-toggle");
   if (!toggleBtn) return;
 
   toggleBtn.addEventListener("click", () => {
-    const current = root.getAttribute("data-theme") || "dark";
+    const current = root.getAttribute("data-theme") || "light";
     const next = current === "dark" ? "light" : "dark";
     root.setAttribute("data-theme", next);
     localStorage.setItem(STORAGE_KEYS.theme, next);
@@ -301,6 +301,10 @@ function renderProfile(profile) {
     profile.fullName && profile.fullName !== DEFAULT_PROFILE.fullName
       ? profile.fullName
       : "IS Portfolio";
+
+  document.querySelectorAll('[data-profile="heroName"]').forEach((el) => {
+    el.textContent = profile.fullName || DEFAULT_PROFILE.fullName;
+  });
 
   document.querySelectorAll('[data-profile="displayName"]').forEach((el) => {
     el.textContent = displayName;
