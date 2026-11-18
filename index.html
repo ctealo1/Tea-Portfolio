@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" data-lens="both">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio · Project Management &amp; Quality Assurance</title>
+  <meta
+    name="description"
+    content="Dual-role portfolio showcasing expertise in Project Management, Systems Analysis, and Quality &amp; Delivery Assurance. BS Information Systems at University of Santo Tomas, Manila."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <!-- Sticky Top Navigation Bar -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a href="#about" class="brand" aria-label="Portfolio Home">
+        <span class="brand-mark" aria-hidden="true">IS</span>
+        <span class="brand-text">
+          <span class="brand-name" data-profile="displayName">IS Portfolio</span>
+          <span class="brand-sub">PM &amp; QA · UST Manila</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" aria-label="Primary Navigation">
+        <a href="#about">About</a>
+        <a href="#competencies">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#lifecycle">SDLC</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="header-controls">
+        <!-- Global Role Lens Switcher -->
+        <div class="lens-switcher" role="group" aria-label="Role Perspective Switcher">
+          <button type="button" class="lens-btn is-active" data-lens-target="both" aria-pressed="true">
+            <span class="lens-dot lens-dot-both" aria-hidden="true"></span>
+            <span>Dual-Role</span>
+          </button>
+          <button type="button" class="lens-btn" data-lens-target="pm" aria-pressed="false">
+            <span class="lens-dot lens-dot-pm" aria-hidden="true"></span>
+            <span>PM Focus</span>
+          </button>
+          <button type="button" class="lens-btn" data-lens-target="qa" aria-pressed="false">
+            <span class="lens-dot lens-dot-qa" aria-hidden="true"></span>
+            <span>QA Focus</span>
+          </button>
+        </div>
+
+        <button
+          type="button"
+          class="icon-btn"
+          id="theme-toggle"
+          aria-label="Toggle dark or light theme"
+          title="Toggle theme"
+        >
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <button
+          type="button"
+          class="icon-btn mobile-menu-btn"
+          id="mobile-menu-toggle"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="mobile-drawer"
+        >
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-drawer" id="mobile-drawer" hidden>
+      <div class="container mobile-drawer-inner">
+        <nav class="mobile-nav" aria-label="Mobile Navigation">
+          <a href="#about">About</a>
+          <a href="#competencies">Skills &amp; Competencies</a>
+          <a href="#experience">Professional Experience</a>
+          <a href="#projects">Featured Projects</a>
+          <a href="#lifecycle">PM &times; QA Workflow</a>
+          <a href="#education">Education</a>
+          <a href="#contact">Contact &amp; Customize</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="hero section" id="about">
+      <div class="hero-glow hero-glow-pm" aria-hidden="true"></div>
+      <div class="hero-glow hero-glow-qa" aria-hidden="true"></div>
+
+      <div class="container">
+        <div class="hero-top">
+          <div class="status-pill">
+            <span class="pulse-dot" aria-hidden="true"></span>
+            <span>BS Information Systems &middot; University of Santo Tomas (2023&ndash;Present) &middot; Manila, PH</span>
+          </div>
+
+          <div class="hero-lens-pill" id="hero-lens-badge">
+            Active Lens: <strong id="active-lens-label">Dual-Role (PM + QA)</strong>
+          </div>
+        </div>
+
+        <div class="hero-content">
+          <p class="hero-eyebrow" id="hero-eyebrow">
+            Project Management &bull; Quality &amp; Delivery Assurance &bull; Systems Analysis
+          </p>
+          <h1 class="hero-title" id="hero-title">
+            Bridging Strategic Project Delivery &amp; Rigorous Software Quality Assurance
+          </h1>
+          <p class="hero-subtitle" id="hero-subtitle">
+            Project Manager, Quality Assurance Lead &amp; Systems Analyst capable of driving end-to-end SDLC execution from requirement scoping and sprint coordination to comprehensive test planning, defect governance, and release assurance.
+          </p>
+
+          <!-- Hero Role Lens Switcher (accessible inline mirror) -->
+          <div class="hero-controls">
+            <div class="cta-group">
+              <a href="#experience" class="btn btn-primary">Explore Experience</a>
+              <a href="#projects" class="btn btn-secondary">View Featured Projects</a>
+              <button type="button" class="btn btn-outline" id="hero-print-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M6 9V2h12v7"></path>
+                  <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+                  <rect x="6" y="14" width="12" height="8"></rect>
+                </svg>
+                <span>Print / View CV Summary</span>
+              </button>
+              <button type="button" class="btn btn-ghost" id="open-customizer-hero">
+                Personalize Header
+              </button>
+            </div>
+
+            <div class="inline-lens-bar" aria-label="Switch Role Focus">
+              <span class="inline-lens-label">Tailor portfolio focus:</span>
+              <div class="lens-switcher lens-switcher-lg" role="group" aria-label="Hero Role Perspective Switcher">
+                <button type="button" class="lens-btn is-active" data-lens-target="both" aria-pressed="true">
+                  <span class="lens-dot lens-dot-both" aria-hidden="true"></span>
+                  <span>Dual-Role (PM + QA)</span>
+                </button>
+                <button type="button" class="lens-btn" data-lens-target="pm" aria-pressed="false">
+                  <span class="lens-dot lens-dot-pm" aria-hidden="true"></span>
+                  <span>Project Manager</span>
+                </button>
+                <button type="button" class="lens-btn" data-lens-target="qa" aria-pressed="false">
+                  <span class="lens-dot lens-dot-qa" aria-hidden="true"></span>
+                  <span>QA &amp; Testing Lead</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dual-Value Proposition Cards -->
+        <div class="value-prop-grid">
+          <article class="prop-card prop-card-pm" data-prop-role="pm">
+            <div class="prop-header">
+              <span class="role-badge role-badge-pm">PM Track</span>
+              <span class="prop-meta">Delivery &amp; Governance</span>
+            </div>
+            <h2>Project Management &amp; Systems Analysis</h2>
+            <p class="prop-desc">
+              Structuring scope, roadmaps, and cross-functional teams so enterprise systems ship on schedule with clear stakeholder alignment.
+            </p>
+            <ul class="prop-list">
+              <li>Agile/Scrum &amp; Sprint Planning</li>
+              <li>Requirement Gathering &amp; Scoping</li>
+              <li>ITIL v4 Change Management</li>
+              <li>Risk Mitigation &amp; Impact Assessment</li>
+              <li>Cross-Functional Team Coordination</li>
+            </ul>
+          </article>
+
+          <article class="prop-card prop-card-qa" data-prop-role="qa">
+            <div class="prop-header">
+              <span class="role-badge role-badge-qa">QA Track</span>
+              <span class="prop-meta">Verification &amp; Reliability</span>
+            </div>
+            <h2>Quality &amp; Delivery Assurance</h2>
+            <p class="prop-desc">
+              Embedding quality gates, verifiable acceptance criteria, and disciplined defect workflows across every phase of the software lifecycle.
+            </p>
+            <ul class="prop-list">
+              <li>Test Plan Formulation &amp; Execution</li>
+              <li>Acceptance Criteria &amp; Quality Gates</li>
+              <li>Defect Triage &amp; Resolution Workflows</li>
+              <li>UAT &amp; Milestone Validation</li>
+              <li>Continuous Quality Improvement</li>
+            </ul>
+          </article>
+        </div>
+
+        <!-- Quick Snapshot Metrics Strip -->
+        <div class="metrics-strip" aria-label="Portfolio Highlights">
+          <div class="metric-item">
+            <span class="metric-value">3</span>
+            <span class="metric-label">Leadership &amp; QA Roles (2025&ndash;2026)</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-value">3</span>
+            <span class="metric-label">Full-Lifecycle Featured Systems</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-value">PM + QA</span>
+            <span class="metric-label">Agile, ITIL v4, UAT &amp; Quality Gates</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-value">6+</span>
+            <span class="metric-label">Languages &amp; DB Stack (Python, Java, TS, SQL)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dual-Track Technical Skills & Competencies -->
+    <section class="section section-alt" id="competencies">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="section-tag">Capabilities Matrix</span>
+            <h2 class="section-title">Dual-Track Skills &amp; Competencies</h2>
+            <p class="section-subtitle">
+              A complete foundation combining project governance, quality assurance discipline, collaborative tooling, and hands-on technical literacy.
+            </p>
+          </div>
+
+          <!-- Skill Filter Controls -->
+          <div class="filter-bar" role="group" aria-label="Filter skills by domain">
+            <button type="button" class="filter-btn is-active" data-skill-filter="all" aria-pressed="true">All Skills</button>
+            <button type="button" class="filter-btn" data-skill-filter="pm" aria-pressed="false">PM &amp; Analysis</button>
+            <button type="button" class="filter-btn" data-skill-filter="qa" aria-pressed="false">QA &amp; Testing</button>
+            <button type="button" class="filter-btn" data-skill-filter="tech" aria-pressed="false">Technical Stack</button>
+          </div>
+        </div>
+
+        <div class="skills-grid">
+          <!-- 1. Methodologies & Frameworks -->
+          <article class="skill-card" data-skill-card="methodologies">
+            <div class="skill-card-head">
+              <div class="skill-icon skill-icon-hybrid" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                  <path d="M2 17l10 5 10-5"></path>
+                  <path d="M2 12l10 5 10-5"></path>
+                </svg>
+              </div>
+              <div>
+                <h3>Methodologies &amp; Frameworks</h3>
+                <p>Process governance &amp; validation lifecycles</p>
+              </div>
+            </div>
+            <div class="pill-group">
+              <span class="skill-pill" data-track="pm">Agile / Scrum</span>
+              <span class="skill-pill" data-track="pm">Sprint Planning</span>
+              <span class="skill-pill" data-track="both">ITIL v4</span>
+              <span class="skill-pill" data-track="both">SDLC</span>
+              <span class="skill-pill" data-track="pm">Waterfall Process Management</span>
+              <span class="skill-pill" data-track="qa">Quality Gates &amp; Validation Lifecycles</span>
+              <span class="skill-pill" data-track="qa">UAT Governance</span>
+            </div>
+          </article>
+
+          <!-- 2. Project Management, QA & Collaboration Tools -->
+          <article class="skill-card" data-skill-card="tools">
+            <div class="skill-card-head">
+              <div class="skill-icon skill-icon-pm" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="3" width="7" height="7" rx="1"></rect>
+                  <rect x="14" y="3" width="7" height="7" rx="1"></rect>
+                  <rect x="3" y="14" width="7" height="7" rx="1"></rect>
+                  <rect x="14" y="14" width="7" height="7" rx="1"></rect>
+                </svg>
+              </div>
+              <div>
+                <h3>PM, QA &amp; Collaboration Tools</h3>
+                <p>Backlogs, defect workflows &amp; code coordination</p>
+              </div>
+            </div>
+            <div class="pill-group">
+              <span class="skill-pill" data-track="both">Jira <small>(Sprint Backlogs &amp; Defect Workflows)</small></span>
+              <span class="skill-pill" data-track="pm">Trello</span>
+              <span class="skill-pill" data-track="tech">Git</span>
+              <span class="skill-pill" data-track="both">GitHub <small>(Code &amp; PR Review Coordination)</small></span>
+              <span class="skill-pill" data-track="both">Notion</span>
+              <span class="skill-pill" data-track="pm">MS Office Suite</span>
+              <span class="skill-pill" data-track="pm">Google Workspace</span>
+            </div>
+          </article>
+
+          <!-- 3. Core Competencies (PM + QA) -->
+          <article class="skill-card skill-card-wide" data-skill-card="competencies">
+            <div class="skill-card-head">
+              <div class="skill-icon skill-icon-qa" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M9 11l3 3L22 4"></path>
+                  <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                </svg>
+              </div>
+              <div>
+                <h3>Core Competencies (PM + QA)</h3>
+                <p>Synchronized execution across planning, analysis &amp; verification</p>
+              </div>
+            </div>
+
+            <div class="competency-split">
+              <div class="competency-col" data-subtrack="pm">
+                <h4 class="competency-label competency-label-pm">PM &amp; Systems</h4>
+                <div class="pill-group">
+                  <span class="skill-pill" data-track="pm">Requirement Gathering &amp; Scoping</span>
+                  <span class="skill-pill" data-track="pm">Business Process Modeling</span>
+                  <span class="skill-pill" data-track="pm">Stakeholder Communication</span>
+                  <span class="skill-pill" data-track="pm">Cross-Functional Team Coordination</span>
+                  <span class="skill-pill" data-track="both">Risk Mitigation &amp; Change Impact Assessment</span>
+                </div>
+              </div>
+              <div class="competency-col" data-subtrack="qa">
+                <h4 class="competency-label competency-label-qa">QA &amp; Delivery</h4>
+                <div class="pill-group">
+                  <span class="skill-pill" data-track="qa">Quality Assurance &amp; UAT</span>
+                  <span class="skill-pill" data-track="qa">Test Plan Design &amp; Execution</span>
+                  <span class="skill-pill" data-track="qa">Acceptance Criteria Definition</span>
+                  <span class="skill-pill" data-track="qa">Defect Prioritization &amp; Tracking</span>
+                  <span class="skill-pill" data-track="both">Milestone &amp; Release Readiness Reviews</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4. Technical Proficiencies -->
+          <article class="skill-card" data-skill-card="technical">
+            <div class="skill-card-head">
+              <div class="skill-icon skill-icon-tech" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <div>
+                <h3>Technical Proficiencies</h3>
+                <p>Engineering fluency for technical reviews &amp; root-cause triage</p>
+              </div>
+            </div>
+            <div class="pill-group">
+              <span class="skill-pill" data-track="tech">Python</span>
+              <span class="skill-pill" data-track="tech">Java</span>
+              <span class="skill-pill" data-track="tech">JavaScript / TypeScript</span>
+              <span class="skill-pill" data-track="tech">SQL</span>
+              <span class="skill-pill" data-track="tech">PostgreSQL</span>
+              <span class="skill-pill" data-track="tech">System Architecture</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Professional Experience Timeline -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="section-tag">Track Record</span>
+            <h2 class="section-title">Professional Experience</h2>
+            <p class="section-subtitle">
+              Demonstrated leadership across project coordination, systems analysis, developer collaboration, and quality assurance. Toggle the Role Lens to emphasize matching responsibilities.
+            </p>
+          </div>
+          <div class="legend-pills" aria-label="Role highlight legend">
+            <span class="legend-item"><span class="legend-dot legend-dot-pm"></span>PM &amp; Scoping</span>
+            <span class="legend-item"><span class="legend-dot legend-dot-qa"></span>QA &amp; Verification</span>
+            <span class="legend-item"><span class="legend-dot legend-dot-both"></span>Cross-Functional / Both</span>
+          </div>
+        </div>
+
+        <div class="timeline">
+          <!-- Experience 1: UST Capstone Project -->
+          <article class="timeline-card" data-exp-tags="pm,qa,systems">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-header">
+              <div>
+                <div class="timeline-meta-row">
+                  <span class="timeline-org">UST Capstone Project</span>
+                  <span class="timeline-loc">Manila, Philippines</span>
+                </div>
+                <h3 class="timeline-role">
+                  Project Coordinator, Systems Analyst &amp; Validation Lead
+                </h3>
+                <p class="timeline-pdf-note">CV Role Title: Project Coordinator &amp; Systems Analyst</p>
+              </div>
+              <div class="timeline-right">
+                <span class="timeline-date">2025&ndash;2026</span>
+                <div class="role-tag-row">
+                  <span class="role-tag role-tag-pm">PM</span>
+                  <span class="role-tag role-tag-qa">QA</span>
+                  <span class="role-tag role-tag-neutral">Systems Analysis</span>
+                </div>
+              </div>
+            </div>
+
+            <ul class="exp-bullets">
+              <li class="exp-bullet" data-role="both">
+                <span class="bullet-badge">PM + QA</span>
+                <span>Gathered, prioritized, and documented functional and non-functional requirements&mdash;alongside testable acceptance criteria&mdash;to drive the development of an enterprise-level information system.</span>
+              </li>
+              <li class="exp-bullet" data-role="both">
+                <span class="bullet-badge">PM + QA</span>
+                <span>Coordinated sprint deliverables and end-to-end validation/UAT activities, aligning project milestones with ITIL v4 best practices for change management and continuous improvement.</span>
+              </li>
+              <li class="exp-bullet" data-role="pm">
+                <span class="bullet-badge">PM / Risk</span>
+                <span>Conducted change impact assessments, system workflow analysis, and cross-functional quality reviews to mitigate project delivery risks and ensure stakeholder alignment.</span>
+              </li>
+            </ul>
+          </article>
+
+          <!-- Experience 2: Fundamentals of BPO -->
+          <article class="timeline-card" data-exp-tags="pm,qa,engineering">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-header">
+              <div>
+                <div class="timeline-meta-row">
+                  <span class="timeline-org">Fundamentals of BPO: Disaster Risk Reduction Management System</span>
+                  <span class="timeline-loc">Manila, Philippines</span>
+                </div>
+                <h3 class="timeline-role">
+                  Associate Project Lead, Developer &amp; Integration QA
+                </h3>
+                <p class="timeline-pdf-note">CV Role Title: Associate Project Lead &amp; Developer</p>
+              </div>
+              <div class="timeline-right">
+                <span class="timeline-date">2026</span>
+                <div class="role-tag-row">
+                  <span class="role-tag role-tag-pm">PM</span>
+                  <span class="role-tag role-tag-qa">QA</span>
+                  <span class="role-tag role-tag-neutral">Engineering</span>
+                </div>
+              </div>
+            </div>
+
+            <ul class="exp-bullets">
+              <li class="exp-bullet" data-role="pm">
+                <span class="bullet-badge">PM / Delivery</span>
+                <span>Co-facilitated sprint planning, code review coordination, and task tracking to uphold development velocity, code quality standards, and system delivery schedules.</span>
+              </li>
+              <li class="exp-bullet" data-role="both">
+                <span class="bullet-badge">PM + QA</span>
+                <span>Acted as a liaison between technical sub-teams to monitor interdependent modules, verify cross-module integration, and resolve bottlenecks across interconnected system components.</span>
+              </li>
+              <li class="exp-bullet" data-role="qa">
+                <span class="bullet-badge">QA / Triage</span>
+                <span>Maintained task backlogs and facilitated cross-team debugging and defect resolution efforts to ensure continuous progress against defined release milestones.</span>
+              </li>
+            </ul>
+          </article>
+
+          <!-- Experience 3: UST Software Engineering Project -->
+          <article class="timeline-card timeline-card-qa-anchor" data-exp-tags="qa,pm">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-header">
+              <div>
+                <div class="timeline-meta-row">
+                  <span class="timeline-org">UST Software Engineering Project</span>
+                  <span class="timeline-loc">Manila, Philippines</span>
+                </div>
+                <h3 class="timeline-role">
+                  Quality &amp; Delivery Assurance Lead
+                </h3>
+                <p class="timeline-pdf-note">CV Role Title: Quality &amp; Delivery Assurance Lead</p>
+              </div>
+              <div class="timeline-right">
+                <span class="timeline-date">2025&ndash;2026</span>
+                <div class="role-tag-row">
+                  <span class="role-tag role-tag-qa">QA</span>
+                  <span class="role-tag role-tag-pm">PM</span>
+                  <span class="role-tag role-tag-neutral">Systems Analysis</span>
+                </div>
+              </div>
+            </div>
+
+            <ul class="exp-bullets">
+              <li class="exp-bullet" data-role="qa">
+                <span class="bullet-badge">QA / Planning</span>
+                <span>Formulated and executed comprehensive test plans, acceptance criteria, and quality gates to verify system functionality against baseline requirements.</span>
+              </li>
+              <li class="exp-bullet" data-role="qa">
+                <span class="bullet-badge">QA / Defects</span>
+                <span>Logged, prioritized, and monitored software defect resolution workflows, collaborating closely with developers to safeguard delivery timelines.</span>
+              </li>
+              <li class="exp-bullet" data-role="both">
+                <span class="bullet-badge">PM + QA</span>
+                <span>Conducted milestone reviews on deliverables and project documentation, ensuring rigorous quality standards across every phase of the lifecycle.</span>
+              </li>
+              <li class="exp-bullet" data-role="both">
+                <span class="bullet-badge">PM + QA</span>
+                <span>Spearheaded risk assessment sessions and quality improvement initiatives to improve team delivery speed and software reliability.</span>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Technical Projects -->
+    <section class="section section-alt" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="section-tag">Selected Work</span>
+            <h2 class="section-title">Featured Technical Projects</h2>
+            <p class="section-subtitle">
+              Each system reflects dual accountability: structured project management from backlog to release, paired with rigorous verification and acceptance validation.
+            </p>
+          </div>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1: Financial Analytics Dashboard -->
+          <article class="project-card" data-project-id="financial">
+            <div class="project-top">
+              <div class="project-badges">
+                <span class="role-tag role-tag-pm">PM Execution</span>
+                <span class="role-tag role-tag-qa">QA Validation</span>
+              </div>
+              <span class="project-index">01</span>
+            </div>
+
+            <h3 class="project-title">Financial Analytics Dashboard</h3>
+            <p class="project-subtitle">Project Scoping, Milestone Tracking, UI Delivery &amp; Data Validation</p>
+            <p class="project-summary">
+              Led end-to-end milestone scheduling and delivery for a real-time portfolio tracking platform, defining feature backlogs and ensuring on-schedule completion of predictive modeling visualizations.
+            </p>
+
+            <div class="project-tabs" role="tablist" aria-label="Financial Analytics Dashboard contributions">
+              <button type="button" class="proj-tab is-active" data-proj-tab="both" role="tab" aria-selected="true">Dual View</button>
+              <button type="button" class="proj-tab" data-proj-tab="pm" role="tab" aria-selected="false">PM Execution</button>
+              <button type="button" class="proj-tab" data-proj-tab="qa" role="tab" aria-selected="false">QA &amp; Verification</button>
+            </div>
+
+            <div class="project-breakdown">
+              <div class="breakdown-panel breakdown-pm" data-panel="pm">
+                <h4>PM Contributions</h4>
+                <p>End-to-end milestone scheduling, feature backlog definition, sprint prioritization, and on-schedule UI delivery.</p>
+              </div>
+              <div class="breakdown-panel breakdown-qa" data-panel="qa">
+                <h4>QA Contributions</h4>
+                <p>Validation of real-time portfolio calculations and predictive modeling outputs, UI responsiveness verification, and acceptance testing against financial data baselines.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Enterprise Inventory System -->
+          <article class="project-card" data-project-id="inventory">
+            <div class="project-top">
+              <div class="project-badges">
+                <span class="role-tag role-tag-pm">PM Execution</span>
+                <span class="role-tag role-tag-qa">Integration QA</span>
+              </div>
+              <span class="project-index">02</span>
+            </div>
+
+            <h3 class="project-title">Enterprise Inventory System</h3>
+            <p class="project-subtitle">Process Mapping, Requirements Analysis, System Coordination &amp; Integration QA</p>
+            <p class="project-summary">
+              Structured operational workflow diagrams and translated client inventory needs into modular milestones, coordinating cross-module system integration and supply chain tracking features.
+            </p>
+
+            <div class="project-tabs" role="tablist" aria-label="Enterprise Inventory System contributions">
+              <button type="button" class="proj-tab is-active" data-proj-tab="both" role="tab" aria-selected="true">Dual View</button>
+              <button type="button" class="proj-tab" data-proj-tab="pm" role="tab" aria-selected="false">PM Execution</button>
+              <button type="button" class="proj-tab" data-proj-tab="qa" role="tab" aria-selected="false">QA &amp; Verification</button>
+            </div>
+
+            <div class="project-breakdown">
+              <div class="breakdown-panel breakdown-pm" data-panel="pm">
+                <h4>PM Contributions</h4>
+                <p>Operational workflow diagramming, translating client inventory requirements into modular milestones, and cross-module coordination.</p>
+              </div>
+              <div class="breakdown-panel breakdown-qa" data-panel="qa">
+                <h4>QA Contributions</h4>
+                <p>Cross-module integration testing across inventory and supply chain tracking pipelines, workflow edge-case validation, and client UAT sign-off verification.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: Laundry & Delivery Management System -->
+          <article class="project-card" data-project-id="laundry">
+            <div class="project-top">
+              <div class="project-badges">
+                <span class="role-tag role-tag-pm">PM Execution</span>
+                <span class="role-tag role-tag-qa">Release QA</span>
+              </div>
+              <span class="project-index">03</span>
+            </div>
+
+            <h3 class="project-title">Laundry &amp; Delivery Management System</h3>
+            <p class="project-subtitle">Agile Prototyping, User Flow Optimization &amp; Release Criteria Assurance</p>
+            <p class="project-summary">
+              Coordinated iterative sprint tasks and feature release criteria for an on-demand booking web application, streamlining booking requests, pickup scheduling, and delivery status tracking.
+            </p>
+
+            <div class="project-tabs" role="tablist" aria-label="Laundry & Delivery Management System contributions">
+              <button type="button" class="proj-tab is-active" data-proj-tab="both" role="tab" aria-selected="true">Dual View</button>
+              <button type="button" class="proj-tab" data-proj-tab="pm" role="tab" aria-selected="false">PM Execution</button>
+              <button type="button" class="proj-tab" data-proj-tab="qa" role="tab" aria-selected="false">QA &amp; Verification</button>
+            </div>
+
+            <div class="project-breakdown">
+              <div class="breakdown-panel breakdown-pm" data-panel="pm">
+                <h4>PM Contributions</h4>
+                <p>Iterative sprint task coordination, agile prototyping, and end-to-end user flow optimization.</p>
+              </div>
+              <div class="breakdown-panel breakdown-qa" data-panel="qa">
+                <h4>QA Contributions</h4>
+                <p>Authoring and enforcing feature release criteria, end-to-end state-transition testing (booking request &rarr; pickup scheduling &rarr; live delivery tracking), and usability validation.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- How I Bridge PM & QA — SDLC Workflow Section -->
+    <section class="section" id="lifecycle">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="section-tag">Unified Methodology</span>
+            <h2 class="section-title">How I Bridge PM &amp; QA Across the SDLC</h2>
+            <p class="section-subtitle">
+              Eliminating handoff friction between planning and verification by unifying roadmap ownership with built-in quality engineering.
+            </p>
+          </div>
+        </div>
+
+        <div class="lifecycle-grid">
+          <article class="stage-card is-active" data-stage="1" tabindex="0">
+            <div class="stage-num">01</div>
+            <h3>Discovery &amp; Scoping</h3>
+            <p class="stage-copy">Requirement gathering, business process modeling, &amp; testable acceptance criteria definition.</p>
+            <div class="stage-split">
+              <span class="stage-chip chip-pm">PM: Scope &amp; Workflows</span>
+              <span class="stage-chip chip-qa">QA: Testable Criteria</span>
+            </div>
+          </article>
+
+          <article class="stage-card" data-stage="2" tabindex="0">
+            <div class="stage-num">02</div>
+            <h3>Sprint Planning &amp; Architecture</h3>
+            <p class="stage-copy">Backlog prioritization, milestone scheduling, risk assessment, &amp; test plan formulation.</p>
+            <div class="stage-split">
+              <span class="stage-chip chip-pm">PM: Roadmaps &amp; Risks</span>
+              <span class="stage-chip chip-qa">QA: Test Plans &amp; Gates</span>
+            </div>
+          </article>
+
+          <article class="stage-card" data-stage="3" tabindex="0">
+            <div class="stage-num">03</div>
+            <h3>Execution, Integration &amp; Defect Governance</h3>
+            <p class="stage-copy">Cross-team coordination, code review tracking, defect triage workflows, &amp; cross-module debugging.</p>
+            <div class="stage-split">
+              <span class="stage-chip chip-pm">PM: Sub-Team Liaison</span>
+              <span class="stage-chip chip-qa">QA: Defect Triage</span>
+            </div>
+          </article>
+
+          <article class="stage-card" data-stage="4" tabindex="0">
+            <div class="stage-num">04</div>
+            <h3>Quality Gates &amp; ITIL v4 Release</h3>
+            <p class="stage-copy">Milestone reviews, UAT validation, change impact assessment, &amp; continuous improvement.</p>
+            <div class="stage-split">
+              <span class="stage-chip chip-pm">PM: Change Impact</span>
+              <span class="stage-chip chip-qa">QA: UAT Sign-Off</span>
+            </div>
+          </article>
+        </div>
+
+        <!-- Interactive Stage Detail Bar -->
+        <div class="stage-detail-bar" id="stage-detail-bar" aria-live="polite">
+          <div class="stage-detail-badge">Stage 01 Spotlight</div>
+          <p id="stage-detail-text">
+            <strong>Discovery &amp; Scoping:</strong> Every functional and non-functional requirement is documented alongside measurable acceptance criteria from day one, preventing ambiguity before a single line of code is written.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education & Credentials -->
+    <section class="section section-alt" id="education">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="section-tag">Academic Foundation</span>
+            <h2 class="section-title">Education &amp; Credentials</h2>
+          </div>
+        </div>
+
+        <article class="edu-card">
+          <div class="edu-main">
+            <div class="edu-crest" aria-hidden="true">UST</div>
+            <div>
+              <div class="edu-meta">
+                <span>Manila, Philippines</span>
+                <span aria-hidden="true">&bull;</span>
+                <span>2023&ndash;Present</span>
+              </div>
+              <h3 class="edu-school">University of Santo Tomas</h3>
+              <p class="edu-degree">Bachelor of Science in Information Systems</p>
+            </div>
+          </div>
+
+          <div class="edu-focus">
+            <h4>Key Academic &amp; Applied Focus Areas</h4>
+            <div class="pill-group">
+              <span class="skill-pill">Enterprise Information Systems</span>
+              <span class="skill-pill">Systems Analysis &amp; Design</span>
+              <span class="skill-pill">Software Engineering &amp; Quality Assurance</span>
+              <span class="skill-pill">IT Service Management (ITIL v4)</span>
+              <span class="skill-pill">Business Process Outsourcing &amp; Operations</span>
+              <span class="skill-pill">Database Management (SQL / PostgreSQL)</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact & Profile Customizer Section -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-card">
+          <div class="contact-info">
+            <span class="section-tag">Let's Connect</span>
+            <h2 class="section-title">Open to PM, QA &amp; Hybrid Delivery Roles</h2>
+            <p class="contact-lead">
+              Whether your team needs disciplined sprint &amp; stakeholder coordination, rigorous test planning and UAT governance, or a hybrid Systems Analyst who bridges both&mdash;let&rsquo;s talk.
+            </p>
+
+            <div class="availability-badges">
+              <span class="avail-badge avail-pm">Open to Project Management Roles</span>
+              <span class="avail-badge avail-qa">Open to QA / Test Engineering Roles</span>
+              <span class="avail-badge avail-hybrid">Open to Systems Analyst / Hybrid Delivery Roles</span>
+            </div>
+
+            <div class="contact-actions">
+              <button type="button" class="btn btn-primary" id="open-customizer-btn">
+                Personalize Contact Details
+              </button>
+              <button type="button" class="btn btn-outline" id="contact-print-btn">
+                Print / Save Tailored CV
+              </button>
+            </div>
+          </div>
+
+          <div class="contact-details-panel">
+            <h3>Candidate Contact Card</h3>
+            <dl class="contact-list">
+              <div class="contact-row">
+                <dt>Name</dt>
+                <dd data-profile="fullName">Your Name (Click &ldquo;Personalize&rdquo; to set)</dd>
+              </div>
+              <div class="contact-row">
+                <dt>Location</dt>
+                <dd data-profile="location">Manila, Philippines</dd>
+              </div>
+              <div class="contact-row">
+                <dt>Email</dt>
+                <dd>
+                  <a href="#contact" id="profile-email-link" data-profile="email">your.email@example.com</a>
+                </dd>
+              </div>
+              <div class="contact-row">
+                <dt>Phone</dt>
+                <dd data-profile="phone">+63 9XX XXX XXXX</dd>
+              </div>
+              <div class="contact-row">
+                <dt>LinkedIn</dt>
+                <dd>
+                  <a href="#contact" id="profile-linkedin-link" target="_blank" rel="noopener noreferrer" data-profile="linkedin">linkedin.com/in/your-profile</a>
+                </dd>
+              </div>
+              <div class="contact-row">
+                <dt>GitHub</dt>
+                <dd>
+                  <a href="#contact" id="profile-github-link" target="_blank" rel="noopener noreferrer" data-profile="github">github.com/your-handle</a>
+                </dd>
+              </div>
+            </dl>
+            <p class="contact-note">
+              Note: Because the uploaded PDF started at the Education header, contact details can be customized locally in your browser (saved in <code>localStorage</code>) or edited directly in <code>script.js</code>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>
+        <span data-profile="displayName">IS Portfolio</span> &middot; BS Information Systems, University of Santo Tomas (Manila, PH)
+      </p>
+      <p class="footer-roles">
+        Project Management &bull; Quality &amp; Delivery Assurance &bull; Systems Analysis
+      </p>
+    </div>
+  </footer>
+
+  <!-- Personalize Contact Details Modal -->
+  <div class="modal-backdrop" id="customizer-modal" hidden role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div>
+          <h2 id="modal-title">Personalize Contact Details</h2>
+          <p>Updates are saved locally in your browser so you can print or share immediately.</p>
+        </div>
+        <button type="button" class="icon-btn" id="close-customizer-btn" aria-label="Close modal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M18 6L6 18M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+      <form id="customizer-form" class="modal-form">
+        <div class="form-grid">
+          <label class="form-field">
+            <span>Full Name</span>
+            <input type="text" name="fullName" id="input-fullName" placeholder="e.g., Juan Dela Cruz" />
+          </label>
+          <label class="form-field">
+            <span>Location</span>
+            <input type="text" name="location" id="input-location" placeholder="Manila, Philippines" />
+          </label>
+          <label class="form-field">
+            <span>Email Address</span>
+            <input type="email" name="email" id="input-email" placeholder="name@example.com" />
+          </label>
+          <label class="form-field">
+            <span>Phone Number</span>
+            <input type="text" name="phone" id="input-phone" placeholder="+63 9XX XXX XXXX" />
+          </label>
+          <label class="form-field">
+            <span>LinkedIn URL</span>
+            <input type="url" name="linkedin" id="input-linkedin" placeholder="https://linkedin.com/in/username" />
+          </label>
+          <label class="form-field">
+            <span>GitHub URL</span>
+            <input type="url" name="github" id="input-github" placeholder="https://github.com/username" />
+          </label>
+        </div>
+
+        <div class="modal-actions">
+          <button type="button" class="btn btn-ghost" id="reset-profile-btn">Reset Defaults</button>
+          <div class="modal-actions-right">
+            <button type="button" class="btn btn-secondary" id="cancel-customizer-btn">Cancel</button>
+            <button type="submit" class="btn btn-primary">Save Details</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
